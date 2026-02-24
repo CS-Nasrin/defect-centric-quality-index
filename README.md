@@ -37,3 +37,18 @@ Lower DQI scores indicate higher structural similarity to real defects.
 git clone https://github.com/CS-Nasrin/DQI.git
 cd DQI
 pip install -r requirements.txt
+
+
+## Requirements
+
+Python 3.9+
+
+PyTorch
+
+torchvision
+
+numpy
+
+pillow
+
+(optional) FAISS for faster nearest-neighbor search
