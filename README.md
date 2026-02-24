@@ -65,6 +65,7 @@ python scripts/build_bank.py \
   --keep-ratio 0.7 \
   --rotations 0,90,180,270 \
   --shot 8
+```
 
 ### 2️⃣ Score Synthetic Defects 
 
