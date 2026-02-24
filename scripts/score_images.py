@@ -1,5 +1,7 @@
 import argparse, torch
 import torch.nn.functional as F
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from dqi import DinoV2Extractor, list_paths, match_by_stem, is_image
 from dqi.bank import score_images, BankMeta
 from dqi.io_utils import write_csv
