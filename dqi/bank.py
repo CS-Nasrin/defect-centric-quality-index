@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math
 from dataclasses import dataclass
-from typing import List, Tuple, Dict, object
+from typing import List, Tuple, Dict
 from PIL import Image
 import torch
 import torch.nn.functional as F
@@ -70,5 +70,6 @@ def score_images(extractor, bank: torch.Tensor, pairs: List[Tuple[str, str]], re
         score = float(torch.topk(dist, k).values.mean().item())
 
         results.append({"image": ip, "mask": mp, "n_kept": int(keep_idx.sum().item()), "score": score})
+
 
     return results
