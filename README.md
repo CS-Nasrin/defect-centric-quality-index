@@ -7,6 +7,7 @@ Official implementation of:
 ---
 
 ## Overview
+![DQI Pipeline](figures/dqi_pipeline.png)
 
 DQI is a defect-focused evaluation metric designed to assess the realism of synthetic industrial defects under few-shot conditions.
 
