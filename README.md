@@ -38,3 +38,43 @@ git clone https://github.com/CS-Nasrin/DQI.git
 cd DQI
 pip install -r requirements.txt
 
+---
+
+## Requirements
+
+- Python 3.9+
+- PyTorch
+- torchvision
+- numpy
+- pillow
+- (optional) FAISS for faster nearest-neighbor search
+
+---
+
+## Quickstart
+
+### 1️⃣ Build a Defect Bank (Few-Shot)
+
+```bash
+python scripts/build_bank.py \
+  --real-images "/path/to/real/images" \
+  --real-masks "/path/to/real/masks" \
+  --mask-suffix "_mask" \
+  --bank-out "out/defect_bank_shot8.pt" \
+  --resize-shorter 672 \
+  --keep-ratio 0.7 \
+  --rotations 0,90,180,270 \
+  --shot 8
+
+### 2️⃣ Score Synthetic Defects 
+
+```bash
+python scripts/score_images.py \
+  --syn-images "/path/to/synthetic/images" \
+  --syn-masks "/path/to/synthetic/masks" \
+  --mask-suffix "_mask" \
+  --bank-in "out/defect_bank_shot8.pt" \
+  --scores-out "out/scores.csv" \
+  --resize-shorter 672 \
+  --keep-ratio 0.7 \
+  --topk-percent 1.0
