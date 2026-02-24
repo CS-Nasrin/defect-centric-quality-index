@@ -38,7 +38,7 @@ git clone https://github.com/CS-Nasrin/DQI.git
 cd DQI
 pip install -r requirements.txt
 
----
+
 
 ## Requirements
 
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 - pillow
 - (optional) FAISS for faster nearest-neighbor search
 
----
+
 
 ## Quickstart
 
