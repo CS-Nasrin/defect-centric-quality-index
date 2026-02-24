@@ -36,7 +36,7 @@ def main():
 
     rows = score_images(extractor, bank, pairs, args.resize_shorter, args.keep_ratio, args.topk_percent, args.use_faiss)
     write_csv(rows, args.scores_out)
-    print(f"[ok] Wrote scores: {args.scores-out}")
+    print(f"[ok] Wrote scores: {args.scores_out}")
 
 if __name__ == "__main__":
     main()
