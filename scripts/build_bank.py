@@ -1,4 +1,6 @@
 import argparse, os, torch
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from dqi import DinoV2Extractor, list_paths, match_by_stem, is_image
 from dqi.bank import build_defect_bank
 
